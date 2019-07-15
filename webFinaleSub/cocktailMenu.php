@@ -69,7 +69,7 @@
     <div class="container">
     <header>
         <a href="vesperMenu.html"> <i id="goBack" class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
-        <a href="mainPage.html" id="logo" class="rounded mx-auto d-block" ></a>
+        <a href="mainPage.php" id="logo" class="rounded mx-auto d-block" ></a>
     </header>
     <main>
         <section>
@@ -132,7 +132,7 @@
             </label>
 
             <div id="id03" class="clearfix">
-                <button  type="submit" class="signupbtn"><a href="vesperMenu.html">Done!</a></button>
+                <button  type="submit" class="signupbtn">Done!</button>
             </div>
             </div>
         </form>

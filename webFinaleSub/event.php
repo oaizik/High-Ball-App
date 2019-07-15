@@ -6,6 +6,11 @@ if(!isset($_SESSION["user_id"]))
  echo('fail');
 else{
   $user=($_SESSION["user_id"]);
+
+  $query1= "SELECT * FROM tb_user_220 WHERE user_id = '$user';";
+  $result1 = mysqli_query($connection, $query1);
+  $row1 = mysqli_fetch_assoc($result1);
+
 }
 ?>
 <!DOCTYPE html>
@@ -54,7 +59,11 @@ else{
       <nav class="nav flex-column flex-sm-row border">
       <a class="flex-sm-fill text-sm-center nav-link border" href="index.php"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i> Sign Out</a>
           <a class="flex-sm-fill text-sm-center nav-link active border" href="#"><i class="fa fa-signal fa-2x" aria-hidden="true"></i> Activity</a>
-          <a class="flex-sm-fill text-sm-center nav-link active border" href="#"> me</a>
+          <a class="flex-sm-fill text-sm-center nav-link active border" href="#"> 
+          <?php
+          echo "<img src='" . $row1["profile_url"] . "' class='rounded mx-auto d-block userPhoto' alt='user'>";
+          ?> 
+          me</a>
           <a class="flex-sm-fill text-sm-center nav-link border" href="#"><i class="fa fa-angellist fa-2x" aria-hidden="true"></i> Events</a>
           <a class="flex-sm-fill text-sm-center nav-link border" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-bars fa-2x" aria-hidden="true"></i> More</a>
       </nav>
